@@ -2,16 +2,16 @@
 
 ## users テーブル
 
-| Column             | Type   | Options     |
-| ------------------ | ------ | ----------- |
-| nickname           | string | null: false |
-| email              | string | null: false |
-| encrypted_password | string | null: false |
-| last_name          | string | null: false |
-| first_name         | string | null: false |
-| last_name_kana     | string | null: false |
-| first_name_kana    | string | null: false |
-| birthday           | date   | null: false |
+| Column             | Type   | Options                  |
+| ------------------ | ------ | ------------------------ |
+| nickname           | string | null: false              |
+| email              | string | null: false, unique:true |
+| encrypted_password | string | null: false              |
+| last_name          | string | null: false              |
+| first_name         | string | null: false              |
+| last_name_kana     | string | null: false              |
+| first_name_kana    | string | null: false              |
+| birthday           | date   | null: false              |
 
 ### Association
 
@@ -26,8 +26,8 @@
 | description                | text       | null: false                    |
 | category_id                | integer    | null: false                    |
 | condition_id               | integer    | null: false                    |
-| shipping_charges_id        | integer    | null: false                    |
-| shipping_area_id           | integer    | null: false                    |
+| shipping_charge_id         | integer    | null: false                    |
+| prefecture_id              | integer    | null: false                    |
 | estimated_shipping_date_id | integer    | null: false                    |
 | price                      | integer    | null: false                    |
 | user                       | references | null: false, foreign_key: true |
@@ -35,9 +35,9 @@
 ### Association
 
 - belongs_to :user
-- belongs_to :purchase
+- has_one :purchase
 
-## purchase テーブル
+## purchases テーブル
 
 | Column | Type       | Options                        |
 | ------ | ---------- | ------------------------------ |
@@ -47,15 +47,15 @@
 ### Association
 
 - belongs_to :user
-- has_one :item
-- belongs_to :shipping
+- belongs_to :item
+- has_one :shipping
 
-## shipping テーブル
+## shippings テーブル
 
 | Column           | Type    | Options     |
 | ---------------- | ------- | ------------|
 | postal_code      | string  | null: false |
-| prefectures_id   | integer | null: false |
+| prefecture_id    | integer | null: false |
 | municipalities   | string  | null: false |
 | address          | string  | null: false |
 | building_name    | string  |             |
