@@ -9,6 +9,18 @@ class Item < ApplicationRecord
   belongs_to :prefecture
   belongs_to :estimated_shipping_date
 
-  validates :product, :description, :price, presence: true
-  validates :category_id, :condition_id, :shipping_charge_id, :prefecture_id, :estimated_shipping_date_id, numericality: { other_than: 1 , message: "can't be blank"}
+  with_options presence: true do
+    validates :image
+    validates :product
+    validates :description
+    validates :price, inclusion: { in: 300..9_999_999 }, format: { with: /\A[0-9]+\z/ }
+  end
+  with_options numericality: { other_than: 1 } do
+    validates :category_id
+    validates :condition_id
+    validates :shipping_charge_id
+    validates :prefecture_id
+    validates :estimated_shipping_date_id
+  end
+  validates :price, numericality: true
 end
