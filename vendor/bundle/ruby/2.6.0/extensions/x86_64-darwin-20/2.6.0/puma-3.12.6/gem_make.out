@@ -1,7 +1,5 @@
 current directory: /Users/teramitomoki/projects/furima-36881/vendor/bundle/ruby/2.6.0/gems/puma-3.12.6/ext/puma_http11
-
-/Users/teramitomoki/.rbenv/versions/2.6.5/bin/ruby -I /Users/teramitomoki/.rbenv/versions/2.6.5/lib/ruby/2.6.0 -r ./siteconf20211009-74070-112w59b.rb extconf.rb
-
+/Users/teramitomoki/.rbenv/versions/2.6.5/bin/ruby -I /Users/teramitomoki/.rbenv/versions/2.6.5/lib/ruby/2.6.0 -r ./siteconf20211009-66746-1bj3qlw.rb extconf.rb
 checking for BIO_read() in -lcrypto... yes
 checking for SSL_CTX_new() in -lssl... yes
 checking for openssl/bio.h... yes
@@ -190,6 +188,4 @@ linking shared-object puma/puma_http11.bundle
 
 current directory: /Users/teramitomoki/projects/furima-36881/vendor/bundle/ruby/2.6.0/gems/puma-3.12.6/ext/puma_http11
 make "DESTDIR=" install
-
-/usr/bin/install -c -m 0755 puma_http11.bundle ./.gem.20211009-74070-30agqh/puma
-
+/usr/bin/install -c -m 0755 puma_http11.bundle ./.gem.20211009-66746-1051iee/puma

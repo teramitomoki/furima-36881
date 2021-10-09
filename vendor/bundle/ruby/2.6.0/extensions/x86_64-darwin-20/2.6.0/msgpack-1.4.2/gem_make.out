@@ -1,7 +1,5 @@
 current directory: /Users/teramitomoki/projects/furima-36881/vendor/bundle/ruby/2.6.0/gems/msgpack-1.4.2/ext/msgpack
-
-/Users/teramitomoki/.rbenv/versions/2.6.5/bin/ruby -I /Users/teramitomoki/.rbenv/versions/2.6.5/lib/ruby/2.6.0 -r ./siteconf20211009-74070-1mnw11w.rb extconf.rb
-
+/Users/teramitomoki/.rbenv/versions/2.6.5/bin/ruby -I /Users/teramitomoki/.rbenv/versions/2.6.5/lib/ruby/2.6.0 -r ./siteconf20211009-66746-n0qbti.rb extconf.rb
 checking for ruby/st.h... yes
 checking for st.h... yes
 checking for rb_str_replace() in ruby.h... yes
@@ -1436,6 +1434,4 @@ linking shared-object msgpack/msgpack.bundle
 
 current directory: /Users/teramitomoki/projects/furima-36881/vendor/bundle/ruby/2.6.0/gems/msgpack-1.4.2/ext/msgpack
 make "DESTDIR=" install
-
-/usr/bin/install -c -m 0755 msgpack.bundle ./.gem.20211009-74070-qnot8o/msgpack
-
+/usr/bin/install -c -m 0755 msgpack.bundle ./.gem.20211009-66746-mpcz07/msgpack
