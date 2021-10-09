@@ -1,5 +1,5 @@
 current directory: /Users/teramitomoki/projects/furima-36881/vendor/bundle/ruby/2.6.0/gems/bootsnap-1.9.1/ext/bootsnap
-/Users/teramitomoki/.rbenv/versions/2.6.5/bin/ruby -I /Users/teramitomoki/.rbenv/versions/2.6.5/lib/ruby/2.6.0 -r ./siteconf20211009-66746-1mpzlf0.rb extconf.rb
+/Users/teramitomoki/.rbenv/versions/2.6.5/bin/ruby -I /Users/teramitomoki/.rbenv/versions/2.6.5/lib/ruby/2.6.0 -r ./siteconf20211009-74070-4ifc5p.rb extconf.rb
 creating Makefile
 
 current directory: /Users/teramitomoki/projects/furima-36881/vendor/bundle/ruby/2.6.0/gems/bootsnap-1.9.1/ext/bootsnap
@@ -367,4 +367,6 @@ linking shared-object bootsnap/bootsnap.bundle
 
 current directory: /Users/teramitomoki/projects/furima-36881/vendor/bundle/ruby/2.6.0/gems/bootsnap-1.9.1/ext/bootsnap
 make "DESTDIR=" install
-/usr/bin/install -c -m 0755 bootsnap.bundle ./.gem.20211009-66746-mfjuo4/bootsnap
+
+/usr/bin/install -c -m 0755 bootsnap.bundle ./.gem.20211009-74070-3s78k/bootsnap
+
