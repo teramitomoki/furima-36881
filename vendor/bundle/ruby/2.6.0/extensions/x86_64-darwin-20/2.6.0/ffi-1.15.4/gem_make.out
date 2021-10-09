@@ -1,5 +1,7 @@
 current directory: /Users/teramitomoki/projects/furima-36881/vendor/bundle/ruby/2.6.0/gems/ffi-1.15.4/ext/ffi_c
-/Users/teramitomoki/.rbenv/versions/2.6.5/bin/ruby -I /Users/teramitomoki/.rbenv/versions/2.6.5/lib/ruby/2.6.0 -r ./siteconf20211009-66746-1fiagdt.rb extconf.rb
+
+/Users/teramitomoki/.rbenv/versions/2.6.5/bin/ruby -I /Users/teramitomoki/.rbenv/versions/2.6.5/lib/ruby/2.6.0 -r ./siteconf20211009-74070-2x25de.rb extconf.rb
+
 checking for ffi_prep_closure_loc() in -lffi... yes
 checking for ffi_prep_cif_var()... yes
 checking for ffi_raw_call()... yes
@@ -4087,4 +4089,6 @@ linking shared-object ffi_c.bundle
 
 current directory: /Users/teramitomoki/projects/furima-36881/vendor/bundle/ruby/2.6.0/gems/ffi-1.15.4/ext/ffi_c
 make "DESTDIR=" install
-/usr/bin/install -c -m 0755 ffi_c.bundle ./.gem.20211009-66746-132rfn7
+
+/usr/bin/install -c -m 0755 ffi_c.bundle ./.gem.20211009-74070-vuinlk
+
