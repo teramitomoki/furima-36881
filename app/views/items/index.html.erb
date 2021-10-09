@@ -123,7 +123,7 @@
   <%# 商品一覧 %>
   <div class='item-contents'>
     <h2 class='title'>ピックアップカテゴリー</h2>
-    <div class="subtitle">'新規投稿商品'</div>
+    <div class="subtitle">新規投稿商品</div>
   <% if @items.present? %>
       <% @items.each do |item|%>
       <li class='list'>
@@ -133,10 +133,10 @@
 
           <%# 商品が売れていればsold outを表示しましょう %>
           <%# <% if @items.present? %>
-            <%# <div class='sold-out'>
-              <span>Sold Out!!</span>
-            </div>
-          <% end %> 
+            <%# <div class='sold-out'> %>
+              <%# <span>Sold Out!!</span> %>
+            <%# </div> %>
+          <%# <% end  %>
           <%# //商品が売れていればsold outを表示しましょう %>
 
           </div>
@@ -152,7 +152,7 @@
             </div>
           </div>
         </div>
-    <% end %>
+      <% end %>
       </li>
       <% end %>
       <% else %>
