@@ -1,7 +1,5 @@
 current directory: /Users/teramitomoki/projects/furima-36881/vendor/bundle/ruby/2.6.0/gems/bcrypt-3.1.16/ext/mri
-
-/Users/teramitomoki/.rbenv/versions/2.6.5/bin/ruby -I /Users/teramitomoki/.rbenv/versions/2.6.5/lib/ruby/2.6.0 -r ./siteconf20211009-74070-1a53y4y.rb extconf.rb
-
+/Users/teramitomoki/.rbenv/versions/2.6.5/bin/ruby -I /Users/teramitomoki/.rbenv/versions/2.6.5/lib/ruby/2.6.0 -r ./siteconf20211009-66746-1of0f50.rb extconf.rb
 creating Makefile
 
 current directory: /Users/teramitomoki/projects/furima-36881/vendor/bundle/ruby/2.6.0/gems/bcrypt-3.1.16/ext/mri
@@ -38,6 +36,4 @@ linking shared-object bcrypt_ext.bundle
 
 current directory: /Users/teramitomoki/projects/furima-36881/vendor/bundle/ruby/2.6.0/gems/bcrypt-3.1.16/ext/mri
 make "DESTDIR=" install
-
-/usr/bin/install -c -m 0755 bcrypt_ext.bundle ./.gem.20211009-74070-190xlxo
-
+/usr/bin/install -c -m 0755 bcrypt_ext.bundle ./.gem.20211009-66746-oc5t62
