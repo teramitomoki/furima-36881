@@ -11,8 +11,8 @@ class PurchaseShipping
     validates :prefecture_id, numericality: { other_than: 0, message: "can't be blank" }
 
   def save
-    user =  User.create(nickname: nickname, email: email, encrypted_password: encrypted_password, last_name: last_name, first_name: first_name, last_name_kana: last_name_kana, first_name_kana: first_name_kana, birth_day: birth_day)
-    Item.create(product: product, description: description, category_id: category.id, condition_id: condition.id, shipping_charge_id: shipping_charge.id, prefecture_id: prefecture.id, estimated_shipping_date_id: estimated_shipping_date.id, price: price, user_id: user.id)
+    purchase =  Purchase.create(item_id: item.id, user_id: user.id)
+    Shipping.create(postal_code: postal_code, prefecture_id: prefecture_id, municipalities: municipalities, address: address, building_name: building_name, telephone_number: telephone_number	, purchase_id: purchase.id)
   end
 
 end
