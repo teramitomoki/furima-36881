@@ -2,10 +2,9 @@ class ItemsController < ApplicationController
   before_action :authenticate_user!, except: [:show, :index]
   before_action :set_item, only: [:show, :edit, :update, :destroy, :move_to_index]
   before_action :move_to_index, only: [:edit, :update, :destroy]
-  
 
   def index
-    @items = Item.all.order(id: "DESC")
+    @items = Item.all.order(id: 'DESC')
   end
 
   def new
@@ -43,13 +42,12 @@ class ItemsController < ApplicationController
   private
 
   def item_params
-    params.require(:item).permit(:image, :product, :description, :category_id, :condition_id, :shipping_charge_id,:prefecture_id, :estimated_shipping_date_id, :price).merge(user_id: current_user.id)
+    params.require(:item).permit(:image, :product, :description, :category_id, :condition_id, :shipping_charge_id, :prefecture_id,
+                                 :estimated_shipping_date_id, :price).merge(user_id: current_user.id)
   end
 
   def move_to_index
-    if current_user.id != @item.user_id
-      redirect_to root_path
-    end
+    redirect_to root_path if current_user.id != @item.user_id
   end
 
   def set_item
