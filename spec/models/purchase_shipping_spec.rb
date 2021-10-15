@@ -3,10 +3,10 @@ require 'rails_helper'
 RSpec.describe PurchaseShipping, type: :model do
   describe '購入先情報の保存' do
     before do
-      @item = FactoryBot.create(:item)
       @user = FactoryBot.create(:user)
-      @purchase_shipping = FactoryBot.create(:purchase_shipping, item_id: @item.id, user_id: @user.id)
-      sleep 0.1
+      @item = FactoryBot.create(:item, user_id: @user.id)
+      @purchase_shipping = FactoryBot.build(:purchase_shipping, item_id: @item.id, user_id: @user.id)
+      sleep 0.5
     end
 
     context '内容に問題ない場合' do
