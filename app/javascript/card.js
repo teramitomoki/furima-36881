@@ -1,9 +1,5 @@
 const pay = () => {
-  const saveCard = document.getElementById("save_card")
-  if (document.getElementById("save_card")) {
-  return saveCard;
-  };
-  Payjp.setPublicKey(process.env.PAYJP_PUBLIC_KEY);// PAY.JPテスト公開鍵
+  Payjp.setPublicKey(process.env.PAYJP_PUBLIC_KEY);
   const submit = document.getElementById("button");
   submit.addEventListener("click", (e) => {
     e.preventDefault();
@@ -26,10 +22,10 @@ const pay = () => {
         renderDom.insertAdjacentHTML("beforeend", tokenObj);
       }
 
-      document.getElementById("card_number").removeAttribute("name");
-      document.getElementById("card_cvc").removeAttribute("name");
-      document.getElementById("card_exp_month").removeAttribute("name");
-      document.getElementById("card_exp_year").removeAttribute("name");
+      document.getElementById("card-number").removeAttribute("name");
+      document.getElementById("card-cvc").removeAttribute("name");
+      document.getElementById("card-exp-month").removeAttribute("name");
+      document.getElementById("card-exp-year").removeAttribute("name");
     
       document.getElementById("charge-form").submit();
     });
