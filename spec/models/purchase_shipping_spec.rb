@@ -3,7 +3,10 @@ require 'rails_helper'
 RSpec.describe PurchaseShipping, type: :model do
   describe '購入先情報の保存' do
     before do
-      @purchase_shipping = FactoryBot.build(:purchase_shipping)
+      @item = FactoryBot.create(:item)
+      @user = FactoryBot.create(:user)
+      @purchase_shipping = FactoryBot.create(:purchase_shipping, item_id: @item.id, user_id: @user.id)
+      sleep 0.1
     end
 
     context '内容に問題ない場合' do
@@ -57,11 +60,11 @@ RSpec.describe PurchaseShipping, type: :model do
         @purchase_shipping.valid?
       end
       it 'userが紐づいていなければ登録できないこと' do
-        @purchase_shipping.user_id = 1
+        @purchase_shipping.user_id = nil
         @purchase_shipping.valid?
       end
       it 'itemが紐づいていなければ登録できないこと' do
-        @purchase_shipping.item_id = 1
+        @purchase_shipping.item_id = nil
         @purchase_shipping.valid?
       end
     end
