@@ -8,8 +8,8 @@ class PurchaseShipping
     validates :address
     validates :user_id
     validates :item_id
-    validates :telephone_number, format: { with: /\A\d{10,11}\z/ }
-    validates :prefecture_id, numericality: { other_than: 0 }
+    validates :telephone_number, format: { with: /\A\d{10,11}\z/, message: "Telephone_number can't be blank" } 
+    validates :prefecture_id, numericality: { other_than:1 }
     validates :token
   end
 
