@@ -45,13 +45,24 @@ RSpec.describe PurchaseShipping, type: :model do
       it 'telephone_numberが空だと保存できないこと' do
         @purchase_shipping.telephone_number = ""
         @purchase_shipping.valid?
-        expect(@purchase_shipping.errors.full_messages).to include("Telephone number can't be blank",
-          "Telephone number Telephone_number can't be blank")
+        expect(@purchase_shipping.errors.full_messages).to include("Telephone number can't be blank")
       end
       it 'telephone_numberが10桁以上11桁以内の半角数値でないと保存できないこと' do
         @purchase_shipping.telephone_number = "080999900010"
         @purchase_shipping.valid?
-        expect(@purchase_shipping.errors.full_messages).to include("Telephone number Telephone_number can't be blank")
+        expect(@purchase_shipping.errors.full_messages).to include("Telephone number is invalid")
+      end
+      it 'tokenが空だと保存できないこと' do
+        @purchase_shipping.token = nil
+        @purchase_shipping.valid?
+      end
+      it 'userが紐づいていなければ登録できないこと' do
+        @purchase_shipping.user_id = 1
+        @purchase_shipping.valid?
+      end
+      it 'itemが紐づいていなければ登録できないこと' do
+        @purchase_shipping.item_id = 1
+        @purchase_shipping.valid?
       end
     end
   end
